@@ -1,0 +1,57 @@
+#sectionCards{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+#cards{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    padding: 10px;
+    border: 1px solid #ccc;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 55px;
+}
+
+.infosUser{
+    display: flex;
+    flex-direction: column;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+.card p {
+    color: #555;
+    margin: 0;
+}
+
+button {
+    height: 25px;
+    margin: 5px 0;
+    color: white;
+    border: none;
+}
+
+.editarUser {
+    background-color: #4CAF50;
+}
+
+.excluirUser {
+    background-color: #f44336;
+}
