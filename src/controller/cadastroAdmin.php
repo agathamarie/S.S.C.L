@@ -6,6 +6,14 @@ $password = $_POST['senhaAdmin'];
 $password_hash = password_hash($password, PASSWORD_DEFAULT);
 $name = $_POST['nameAdmin'];
 
+if (empty($email) || empty($password) || empty($name)) {
+    echo "<script>
+            alert('Por favor, preencha todos os campos!');
+            window.location.href='../templates/cadastroAdmin.php';
+          </script>";
+    exit();
+}
+
 $query_test = "SELECT emailAdmin FROM Admin WHERE emailAdmin = ?";
 $stmt = $connection->prepare($query_test);
 $stmt->bind_param("s", $email);

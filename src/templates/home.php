@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSCL</title>
+    <title>S.S.C.L</title>
     <link rel="stylesheet" href="../css/home.css">
     <link rel="icon" href="../css/images/iconAgatha.png" type="image/png">
 </head>
@@ -14,7 +14,7 @@
             <h2>Olá<h2>
             <br>
 
-            <p class="text">Bem-vindo(a) ao simples sistema de cadastro e login,<br>com dois tipos de usuários: Adm  e Usuário Comum.</p>
+            <p class="text">Bem-vindo(a) ao S.S.C.L, simples sistema de cadastro e login,<br>com dois tipos de usuários: Adm  e Usuário Comum.</p>
 
             <br>
             <p class="text">Qual tipo de usuário você é:</p>

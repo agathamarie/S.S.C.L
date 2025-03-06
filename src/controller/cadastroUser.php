@@ -6,6 +6,14 @@ $password = $_POST['senhaUser'];
 $password_hash = password_hash($password, PASSWORD_DEFAULT);
 $name = $_POST['nameUser'];
 
+if (empty($email) || empty($password) || empty($name)) {
+    echo "<script>
+            alert('Por favor, preencha todos os campos!');
+            window.location.href='../templates/cadastroUser.php';
+          </script>";
+    exit();
+}
+
 $query_test = "SELECT emailUser FROM User WHERE emailUser = ?";
 $stmt = $connection->prepare($query_test);
 $stmt->bind_param("s", $email);
