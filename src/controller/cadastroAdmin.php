@@ -30,11 +30,9 @@ if ($result->num_rows > 0) {
     $insert = $stmt_insert->execute();
 
     if ($insert) {
-        echo "<script language='javascript' type='text/javascript'>
-        alert('Admin cadastrado com sucesso!'); window.location.href='../templates/loginAdmin.php';</script>";
+        header('Location: ../templates/loginAdmin.php');
     } else {
-        echo "<script language='javascript' type='text/javascript'>
-        alert('Não foi possível cadastrar esse admin'); window.location.href='../templates/cadastroAdmin.php';</script>";
+        header('Location: ../templates/cadastroAdmin.php');
     }
 }
 

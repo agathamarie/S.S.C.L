@@ -30,11 +30,9 @@ if ($result->num_rows > 0) {
     $insert = $stmt_insert->execute();
 
     if ($insert) {
-        echo "<script language='javascript' type='text/javascript'>
-        alert('Usuário cadastrado com sucesso!'); window.location.href='../templates/loginUser.php';</script>";
+        header('Location: ../templates/loginUser.php');
     } else {
-        echo "<script language='javascript' type='text/javascript'>
-        alert('Não foi possível cadastrar esse usuário'); window.location.href='../templates/cadastroUser.php';</script>";
+        header('Location: ../templates/cadastroUser.php');
     }
 }
 

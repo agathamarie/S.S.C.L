@@ -14,7 +14,7 @@
                 <input name="senhaUser" id="senhaUser" class="inputForm" type="password" placeholder="Digite sua senha...">
                 <span class="fa fa-eye-slash" id="iconePassword"></span> 
             </div>
-            <p id="esqueciSenha" name="esqueciSenha">Esqueci a senha</p>
+            <a href="../templates/recuperarSenhaUser.php" id="esqueciSenha" name="esqueciSenha">Esqueci a senha</a>
         </div>
 
         <input type="submit" value="Entrar" id="entrar" name="entrar">
