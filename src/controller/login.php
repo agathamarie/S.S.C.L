@@ -26,10 +26,10 @@ if ($resultado->num_rows > 0) {
     if (password_verify($password_digitada, $user['senha'])) {
         $_SESSION["user_logado"] = $user['email'];
         
-        if ($user['typeUser'] === 'userComum'){
+        if ($user['typeUser'] === 'userAdm'){
             header('Location: ../templates/pageAdmin.php');
             exit();
-        } else if ($user['typeUser'] === 'userAdm') {
+        } else if ($user['typeUser'] === 'userComum') {
             header('Location: ../templates/pageUser.php');
             exit();
         } else {

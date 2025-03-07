@@ -11,7 +11,7 @@
 <body>
 
 <section id="sectionForm">
-    <?php include('../components/editarPerfilUserForm.php') ?>
+    <?php include('../components/pageUserForm.php') ?>
 </section>
 
 <section id="sectionButtonSair">

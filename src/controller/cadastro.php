@@ -27,7 +27,7 @@ if ($result->num_rows > 0) {
 } else {
     $query = "INSERT INTO User (nameUser, email, senha, typeUser) VALUES (?, ?, ?, ?)";
     $stmt_insert = $connection->prepare($query);
-    $stmt_insert->bind_param("sssi", $name, $email, $password_hash, $typeUser);
+    $stmt_insert->bind_param("ssss", $name, $email, $password_hash, $tipo);
     $insert = $stmt_insert->execute();
 
     if ($insert) {

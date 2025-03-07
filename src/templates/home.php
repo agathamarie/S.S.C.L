@@ -17,15 +17,11 @@
             <p class="text">Bem-vindo(a) ao S.S.C.L, simples sistema de cadastro e login,<br>com dois tipos de usuários: Adm  e Usuário Comum.</p>
 
             <br>
-            <p class="text">Qual tipo de usuário você é:</p>
+            <p class="text">Gostaria de testar?</p>
             <div id="cardsEscolha">
-                <div class="card" onclick="window.location='cadastroUser.php';">
+                <div class="card" onclick="window.location='cadastro.php';">
                     <img class="cardImage" src="../css/images/iconUser.png">
-                    <p class="tituloCard">Usuário Comum</p>
-                </div>
-                <div class="card" onclick="window.location='cadastroAdmin.php';">
-                    <img class="cardImage" src="../css/images/iconAdmin.png">
-                    <p class="tituloCard">Administrador</p>
+                    <p class="tituloCard">Cadastre-se!</p>
                 </div>
             </div>
         </div>

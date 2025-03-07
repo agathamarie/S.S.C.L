@@ -9,10 +9,10 @@
 <?php
 include "../banco/db.php"; 
 
-if (isset($_GET['idUser'])) {
-    $idUser = $_GET['idUser'];
+if (isset($_GET['idUser']) && is_numeric($_GET['idUser'])) {
+    $idUser = (int) $_GET['idUser'];
 
-    $query = "SELECT ID, nameUser, emailUser FROM User WHERE ID = ?";
+    $query = "SELECT ID, nameUser, email FROM User WHERE ID = ?";
     $stmt = $connection->prepare($query);
     $stmt->bind_param("i", $idUser);
     $stmt->execute();
@@ -22,20 +22,22 @@ if (isset($_GET['idUser'])) {
         $user = $resultado->fetch_assoc();
         echo '<div id="divForm">';
         echo '  <form method="POST" action="../controller/editarUser.php">';
-        echo '      <input type="hidden" name="idUser" value="' . $user['ID'] . '">';
+
+        echo '      <input type="hidden" name="idUser" value="' . htmlspecialchars($user['ID']) . '">';
+
         echo '      <label for="nameUser">Nome:</label>';
         echo '      <input type="text" name="nameUser" class="inputForm" value="' . htmlspecialchars($user['nameUser']) . '" required><br>';
-        echo '      <label for="emailUser">Email:</label>';
-        echo '      <input type="email" name="emailUser" class="inputForm" value="' . htmlspecialchars($user['emailUser']) . '" required><br>';
+
+        echo '      <label for="email">Email:</label>';
+        echo '      <input type="email" name="email" class="inputForm" value="' . htmlspecialchars($user['email']) . '" required><br>';
 
         echo '      <input type="submit" value="Salvar" id="salvar" name="salvar">';
         echo '  </form>';
-        echo'</div>';
-
+        echo '</div>';
     } else {
-        echo 'Usuário não encontrado.';
+        echo '<p>Usuário não encontrado.</p>';
     }
 } else {
-    echo 'ID do usuário não especificado.';
+    echo '<p>ID do usuário não especificado ou inválido.</p>';
 }
 ?>
