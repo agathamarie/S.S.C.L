@@ -21,14 +21,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SS</title>
+    <link href="/website/css/uicons.css">
     <link rel="icon" href="../../public/images/iconSite.png" type="image/png">
     <link rel="stylesheet" href="../../public/css/default.css">
     <link rel="stylesheet" href="<?= $css ?>">
 </head>
 <body>
 
-    <header>
+    <section id="navBar">
         <?php
             include($location);
         ?>
-    </header>
+    </section>

@@ -1,5 +1,5 @@
     <footer id="footer">
-        <a href="../../views/home.php"><img id="logoFooter" src="../../public/images/logoFooter.png" alt="Logo Simple System"></a>
+        <a href="../../views/home.php"><img id="logoFooter" src="../../public/images/logos/logoFooter.png" alt="Logo Simple System"></a>
 
         <nav id="navFooter">
             <a href="../../views/sobre-projeto.php" class="itemnav-footer">Sobre o Projeto</a>
