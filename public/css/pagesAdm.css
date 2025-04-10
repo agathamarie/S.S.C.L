@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --darkred: #893D4C;
+    --red: #860F37;
+    --darkpink: #EF6A85;
+    --pink: #FFC6C5;
+    --whiteyellow: #FFF6E5;
+    --black: #452129;
+    --white: #ffffff;
+}
+
+/* NAV BAR ADM - DESKTOP */
+#navBar {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkpink);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+#navBarResponsivo {
+    display: none;
+}
+
+#navBar.minimized {
+    width: 80px;
+    padding: 20px 10px;
+}
+#navBar.minimized .nav-item {
+    justify-content: center;
+}
+#navBar.minimized .textMenuItem {
+    display: none;
+}
+#navBar.minimized .textMenu {
+    display: none;
+}
+#navBar.minimized i {
+    font-size: 24px;
+}
+
+#adm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+#divMenu {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+#divMenu i {
+    font-size: 22px;
+    color: var(--whiteyellow);
+    cursor: pointer;
+}
+#divMenu i:hover {
+    color: var(--darkred);
+    transform: scale(1.1);
+}
+
+#ul-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: auto 0;
+}
+.div-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.textMenu {
+    font-size: 13px;
+    color: var(--whiteyellow);
+}
+.item-menu {
+    transition: 0.3s;
+}
+.textMenuItem{
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--whiteyellow);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s, color 0.2s;
+}
+
+.nav-item:hover {
+    background-color: var(--darkred);
+    color: var(--whiteyellow);
+    transform: translateX(5px);
+}
+.nav-item i {
+    display: flex;
+    font-size: 15px;
+    transition: transform 0.2s;
+    align-items: center;
+    align-content: center;
+}
+.nav-item:hover i {
+    transform: scale(1.1) rotate(6deg);
+}
+
+#navBar.minimized .item-menu{
+    padding: 5px;
+}
+#navBar.minimized .div-ul{
+    align-items: center;
+}
+
+#navBar.minimized .nav-item{
+    padding: 10px;
+}
+#navBar.minimized .nav-item:hover{
+    padding: 10px;
+}
+#navBar.minimized .nav-item i{
+    display: flex;
+}
+
+/* NAV BAR ADM - MOBILE/TABLET */
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px){
+    #navBar {
+        display: none;
+    }
+    #navBarResponsivo {
+        display: flex;
+        width: 100vw;
+        height: 70px;
+        top: unset;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--darkpink);
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        flex-direction: row;
+    }
+    #adm {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    #ul-nav {
+        flex-direction: row;
+    }
+
+    .div-ul, #div-menu {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .textMenuItem, .textMenu {
+        display: none;
+    }
+
+    .nav-item i {
+        font-size: 25px;
+    }
+
+    #div-outros {
+        position: absolute;
+        width: 50%;
+        height: 30%;
+        bottom: 0;
+        right: 30px;
+        background: var(--darkpink);
+        padding: 10px 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        display: none;
+        z-index: 1000;
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+    #div-outros.show-menu {
+        display: flex;
+    }
+      
+}

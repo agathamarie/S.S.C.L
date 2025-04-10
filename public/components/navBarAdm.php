@@ -1,19 +1,14 @@
-<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
-<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
-<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
-<link rel="stylesheet" href="../../public/css/teste.css">
-<section id="navBar">
-
     <script>
         if (localStorage.getItem("menuState") === "open") {
             document.documentElement.classList.add("menu-open");
         }
     </script>
-    <nav id="adm" class="minimized">
+
+<section id="navBar" class="minimized">
+    <nav id="adm">
         <div id="divMenu">
             <i id="buttonMenu" class="fi fi-br-menu-burger"></i>
         </div>
-
         
         <ul id="ul-nav">
             <div class="div-ul">
@@ -40,7 +35,7 @@
                 </li>
             </div>
 
-            <div class="div-ul">
+            <div class="div-ul" id="div-outros">
                 <p class="textMenu">Outros</p>
                 <li class="item-menu">
                     <a href="#" class="nav-item">
@@ -54,6 +49,52 @@
                 </li>
             </div>
         </ul>
+    </nav>
+</section>
+<script src="../../public/scripts/navBarAdm.js"></script>
+
+<section id="navBarResponsivo">
+    <nav id="adm">
+        <ul id="ul-nav">
+            <div class="div-ul">
+                <li class="item-menu">
+                    <a href="" class="nav-item">
+                        <i class="fi fi-sr-apps"></i>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="" class="nav-item">
+                        <i class="fi fi-sr-users-alt"></i>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="" class="nav-item">
+                        <i class="fi fi-sr-users-gear"></i>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="" class="nav-item">
+                        <i class="fi fi-br-stats"></i>
+                    </a>
+                </li>
+            </div>
+        </ul>
+
+        <div id="divMenu">
+            <i id="buttonMenuMobile" class="fi fi-br-menu-burger"></i>
+        </div>
+        <div class="" id="div-outros">
+            <li class="item-menu">
+                <a href="#" class="nav-item">
+                    <i class="fi fi-sr-circle-user"></i> <span class="textMenuItem">PERFIL</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="../../index.php" class="nav-item">
+                    <i class="fi fi-br-sign-out-alt"></i> <span class="textMenuItem">SAIR</span>
+                </a>
+            </li>
+        </div>
     </nav>
 
 </section>

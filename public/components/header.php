@@ -1,10 +1,11 @@
 <?php
-    session_start();
-    if (!isset($_SESSION['type_user'])) {
-        header('Location: ../../views/pages/login/login.php');
-        exit;
-    }
-    $type_user = $_SESSION['type_user'];
+    // session_start();
+    // if (!isset($_SESSION['type_user'])) {
+    //     header('Location: ../../views/pages/login/login.php');
+    //     exit;
+    // }
+    // $type_user = $_SESSION['type_user'];
+    $type_user = 'adm';
 
     if ($type_user == 'adm'){
         $location = '../../public/components/navBarAdm.php';
@@ -13,6 +14,8 @@
         $locantion = '../../public/components/navBarUser.php';
         $css = '../../public/css/pagesUser.css';
     }
+
+   
 ?>
 
 <!DOCTYPE html>
@@ -24,12 +27,12 @@
     <link href="/website/css/uicons.css">
     <link rel="icon" href="../../public/images/iconSite.png" type="image/png">
     <link rel="stylesheet" href="../../public/css/default.css">
+    <?php include('../../public/packs/icons.php') ?>
     <link rel="stylesheet" href="<?= $css ?>">
 </head>
 <body>
+    <?php
+        include($location);
+    ?>
 
-    <section id="navBar">
-        <?php
-            include($location);
-        ?>
-    </section>
+    <section id="content"></section>
