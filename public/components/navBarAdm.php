@@ -51,7 +51,6 @@
         </ul>
     </nav>
 </section>
-<script src="../../public/scripts/navBarAdm.js"></script>
 
 <section id="navBarResponsivo">
     <nav id="adm">
@@ -77,24 +76,29 @@
                         <i class="fi fi-br-stats"></i>
                     </a>
                 </li>
-            </div>
-        </ul>
 
-        <div id="divMenu">
-            <i id="buttonMenuMobile" class="fi fi-br-menu-burger"></i>
-        </div>
-        <div class="" id="div-outros">
-            <li class="item-menu">
-                <a href="#" class="nav-item">
-                    <i class="fi fi-sr-circle-user"></i> <span class="textMenuItem">PERFIL</span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="../../index.php" class="nav-item">
-                    <i class="fi fi-br-sign-out-alt"></i> <span class="textMenuItem">SAIR</span>
-                </a>
-            </li>
-        </div>
-    </nav>
-
+                <!-- <div class="div">
+                    <li class="item-menu">
+                        <div class="nav-item">
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </ul> -->
+        </nav>
+        <i id="buttonMenuMobile" class="fi fi-br-menu-burger"></i>
+    <div id="div-outros-mobile">
+        <li class="item-menu">
+            <a href="#" class="nav-item">
+                <i class="fi fi-sr-circle-user"></i> <span class="textMenuItem">PERFIL</span>
+            </a>
+        </li>
+        <li class="item-menu">
+            <a href="../../index.php" class="nav-item">
+                <i class="fi fi-br-sign-out-alt"></i> <span class="textMenuItem">SAIR</span>
+            </a>
+        </li>
+    </div>
 </section>
+
+<script src="../../public/scripts/navBarAdm.js"></script>

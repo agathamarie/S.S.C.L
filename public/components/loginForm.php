@@ -30,7 +30,7 @@
         const type = conteudoPassword.type === 'password' ? 'text' : 'password';
         conteudoPassword.type = type;
 
-        this.classList.toggle('fa-eye');
+        this.classList.toggle('menu-burger');
         this.classList.toggle('fa-eye-slash');
     });
 </script>

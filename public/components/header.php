@@ -5,13 +5,13 @@
     //     exit;
     // }
     // $type_user = $_SESSION['type_user'];
-    $type_user = 'adm';
+    $type_user = 'user';
 
     if ($type_user == 'adm'){
         $location = '../../public/components/navBarAdm.php';
         $css = '../../public/css/pagesAdm.css';
     } elseif ($type_user == 'user') {
-        $locantion = '../../public/components/navBarUser.php';
+        $location = '../../public/components/navBarUser.php';
         $css = '../../public/css/pagesUser.css';
     }
 
@@ -26,8 +26,8 @@
     <title>SS</title>
     <link href="/website/css/uicons.css">
     <link rel="icon" href="../../public/images/iconSite.png" type="image/png">
-    <link rel="stylesheet" href="../../public/css/default.css">
     <?php include('../../public/packs/icons.php') ?>
+    <link rel="stylesheet" href="../../public/css/default.css">
     <link rel="stylesheet" href="<?= $css ?>">
 </head>
 <body>
